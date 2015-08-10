@@ -1,6 +1,9 @@
 <h2>Show Post</h2>
 <h4> <%= @post.title %> </h4>
 <h4>This will be an iframe for hosted video url:</h4>
+<iframe width="420" height="315"
+src='http://www.youtube.com/embed/<%= @post.url %>?autoplay=1' >
+</iframe>
 <h4> <%= @post.url %> </h4>
 <h4> <%= @post.description %> </h4>
 <h4>DISQUS COMMENTS BELOW:</h4>

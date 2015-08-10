@@ -6,8 +6,7 @@
 <h1>Hello, world!</h1>
 
 <h2>All posts below:</h2>
-<%= link_to 'New Post', new_post_path %>
 <% @posts.each do |post|  %>
   <p><%= link_to post.title, post_path(post) %></p>
-  <!-- template render for post -->
+  <!-- template render for post card -->
 <% end %>

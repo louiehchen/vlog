@@ -11,8 +11,11 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <%= link_to 'Home', root_path %>
+  <%= link_to 'Projects' %>
+  <%= link_to 'About' %>
   <% if admin_signed_in? %>
     <%= link_to 'Admin Logout', destroy_admin_session_path, method: 'delete' %>
+    <%= link_to 'New Post', new_post_path %>
   <% elsif user_signed_in? %>
     <%= link_to 'User Logout', destroy_user_session_path, method: 'delete' %>
   <% end  %>
