@@ -4,7 +4,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @admin = Admin.find(session["warden.user.admin.key"][0][0])
+    @post = @admin.posts.new(post_params)
     if @post.save
       redirect_to root_path
     else

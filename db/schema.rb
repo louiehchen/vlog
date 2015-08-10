@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20150807112151) do
     t.string   "title",       null: false
     t.string   "url",         null: false
     t.string   "description", null: false
+    t.integer  "admin_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
