@@ -7,3 +7,7 @@ src='http://www.youtube.com/embed/<%= @post.url %>?autoplay=1' >
 <h4> <%= @post.url %> </h4>
 <h4> <%= @post.description %> </h4>
 <h4>DISQUS COMMENTS BELOW:</h4>
+
+<% if admin_signed_in? %>
+  <%= link_to 'edit', edit_post_path(@post) %>
+<% end %>
