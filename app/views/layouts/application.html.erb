@@ -10,7 +10,7 @@
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-
+  <%= link_to 'Home', root_path %>
   <% if admin_signed_in? %>
     <%= link_to 'Admin Logout', destroy_admin_session_path, method: 'delete' %>
   <% elsif user_signed_in? %>
