@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+
+  before_action :require_login, only: [:new, :create, :edit, :update, :destroy]
+
   def new
     @post = Post.new
   end
@@ -36,6 +39,13 @@ class PostsController < ApplicationController
   end
 
   private
+
+  def require_login
+    unless admin_signed_in?
+      flash[:notice] = "You must be logged in to do that"
+      redirect_to new_admin_session_path
+    end
+  end
 
   def post_params
     params.require(:post).permit(:url, :title, :description)
