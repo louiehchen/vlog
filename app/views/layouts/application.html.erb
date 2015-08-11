@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
   <title>Vlog</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 </head>
 <body>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <%= link_to 'Home', root_path %>
-  <%= link_to 'Projects' %>
-  <%= link_to 'About' %>
+  <%= link_to 'Projects', projects_path %>
+  <%= link_to 'About', about_path %>
   <% if admin_signed_in? %>
     <%= link_to 'Admin Logout', destroy_admin_session_path, method: 'delete' %>
     <%= link_to 'New Post', new_post_path %>
