@@ -38,6 +38,11 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
+  def all_posts
+    @posts =  Post.all
+    render json: @posts
+  end
+
   private
 
   def require_login
