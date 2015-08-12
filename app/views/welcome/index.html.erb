@@ -18,7 +18,18 @@
   <!-- template render for post card -->
 <% end %>
 
-      <label>Name:</label>
+<!--       <label>Name:</label>
       <input type="text" ng-model="yourName" placeholder="Enter a name here">
       <hr>
-      <h1>Hello {{yourName}}!</h1>
+      <h1>Hello {{yourName}}!</h1> -->
+
+<input type="text" ng-model="query" placeholder="search videos">
+
+<div ng-controller='backendTest'>
+  <h2>Posts?</h2>
+  <ul>
+    <li ng-repeat='post in posts | filter:query'>
+      <h3> <a href="/posts/{{post.id}}">{{post.title}}</a></h3>
+    </li>
+  </ul>
+</div>
