@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :posts
 
+  get '/posts_json' => 'posts#all_posts'
+
   get '/projects' => 'projects#index'
 
   get '/about' => 'welcome#about'
