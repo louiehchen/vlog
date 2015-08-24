@@ -1,0 +1,20 @@
+<ul id="post-list">
+  <li ng-repeat='post in posts | filter:query'>
+    <div class="row">
+      <!-- below: col-lg-offset-2 -->
+      <div class="col-lg-2 col-lg-offset-1" id="post-img">
+        <%= image_tag('placeholder', size: '125x125', alt: 'placeholder', :class => 'img-circle')%>
+      </div>
+      <div class="col-lg-8">
+        <div class="post-preview">
+          <a href="/posts/{{post.id}}">
+            <h2 class="post-title">{{post.title}}</h2>
+            <h3 class="post-subtitle">this is where a limited post description will be</h3>
+          </a>
+            <p class="post-meta">Posted under: <a href="#">POST CATEGORY</a> post date</p>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </li>
+</ul>
