@@ -1,38 +1,19 @@
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
 <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Clean Blog</h1>
-                    <hr class="small">
-                    <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="site-heading">
+          <h1>Clean Blog</h1>
+          <hr class="small">
+          <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
         </div>
+      </div>
     </div>
+  </div>
 </header>
 
-<h1>Hello, world!</h1>
-<h1>Todo</h1>
-<ul>
-  <li>STYLE</li>
-  <li>get basic layout</li>
-  <li>look into react for live chat feature</li>
-  <li>get angular running on top</li>
-</ul>
-
-<h2>All posts below:</h2>
-<% @posts.each do |post|  %>
-  <p><%= link_to post.title, post_path(post) %></p>
-  <!-- template render for post card -->
-<% end %>
-
-<!--       <label>Name:</label>
-      <input type="text" ng-model="yourName" placeholder="Enter a name here">
-      <hr>
-      <h1>Hello {{yourName}}!</h1> -->
 <h2>Search Videos:</h2>
 <input type="text" ng-model="query" placeholder="filter videos">
 
