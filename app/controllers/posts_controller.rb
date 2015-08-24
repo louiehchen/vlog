@@ -39,7 +39,7 @@ class PostsController < ApplicationController
   end
 
   def all_posts
-    @posts =  Post.all
+    @posts = Post.all
     render json: @posts
   end
 
