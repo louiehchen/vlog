@@ -1,3 +1,41 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Lora:700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600italic,400);
+
+*{
+  font-family: 'Lora', serif;
+}
+
+#banner {
+  background: image-url('home-bg.jpg');
+  background-size: contain;
+  background-size: cover;
+  line-height: 110px;
+  width: 100%;
+  padding-bottom: 100px;
+  padding-top: 50px
+}
+
+.banner-heading {
+  margin-top: 10%;
+  font-size: 45px;
+}
+
+.subheading {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 25px;
+  color: white;
+}
+
+#post-list {
+  margin-top: 5%;
+  list-style-type: none;
+}
+
+#post-img {
+  margin-top: 1%;
+}
