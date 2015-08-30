@@ -8,7 +8,7 @@ set :repo_url, 'git@github.com:lowellmower/vlog.git'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/home/deploy/vlog'
+set :deploy_to, '/home/deploy/LowellVlog'
 
 # Default value for :scm is :git
 # set :scm, :git
