@@ -6,7 +6,7 @@ set :repo_url, 'https://www.github.com/lowellmower/vlog'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/u/apps/vlog'
+set :deploy_to, '/home/deploy/vlog'
 
 # Use agent forwarding for SSH so you can deploy with the SSH key on your workstation.
 set :ssh_options, {
@@ -17,10 +17,10 @@ set :ssh_options, {
 set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, %w{config/database.yml .rbenv-vars .ruby-version}
+set :linked_files, %w{config/database.yml config/secrets.yml .rbenv-vars .ruby-version}
 
 # Default value for linked_dirs is []
-set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 # Default value for default_env is {}
 set :default_env, { path: "/opt/rbenv/shims:$PATH" }
