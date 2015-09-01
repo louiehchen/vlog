@@ -1,6 +1,6 @@
 lock '>= 3.1.0'
 set :application, 'vlog_deploy'
-set :repo_url, '>> your git repo_url'
+set :repo_url, 'https://www.github.com/lowellmower/vlog'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
