@@ -1,12 +1,12 @@
 # Load DSL and set up stages
 require 'capistrano/setup'
-
+require 'capistrano/rails'
 # Include default deployment tasks
 require 'capistrano/deploy'
 
 set :rbenv_type, :user # or :system, depends on your rbenv setup
 set :rbenv_ruby, '2.0.0-p451'
-
+set :normalize_asset_timestamps, %{public/images public/javascripts public/stylesheets}
 # Include tasks from other gems included in your Gemfile
 #
 # For documentation on these, see for example:
