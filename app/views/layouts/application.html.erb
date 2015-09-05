@@ -31,20 +31,12 @@
         <li>
           <%= link_to 'about', about_path %>
         </li>
-        <li>
-          <% unless admin_signed_in? %>
-            <%= link_to 'a-log in', new_admin_session_path %>
-          <% end %>
-        </li>
         <% if admin_signed_in? %>
           <li><%= link_to 'admin logout', destroy_admin_session_path, method: 'delete' %></li>
           <li><%= link_to 'new post', new_post_path %></li>
         <% elsif user_signed_in? %>
           <li><%= link_to 'user logout', destroy_user_session_path, method: 'delete' %></li>
         <% end  %>
-        <li>
-          <%= link_to 'create admin', new_admin_registration_path %>
-        </li>
         <li>
           <%= link_to 'contact' %>
         </li>
