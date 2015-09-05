@@ -23,7 +23,7 @@ set :linked_files, %w{config/database.yml config/secrets.yml}
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 # Default value for default_env is {}
-set :default_env, { path: "/opt/rbenv/shims:$PATH" }
+set :default_env, { path: "/home/deploy/.rbenv/shims:$PATH" }
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
