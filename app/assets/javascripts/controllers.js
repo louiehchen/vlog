@@ -20,7 +20,7 @@
 // });
 
 angular.module('vlogApp', [])
-  .controller('vlogControllers', function($scope, $http){
+  .controller('vlogControllers', ['$scope','$http', function($scope, $http) {
 
     function getPosts(){
       $http.get('/posts_json').success(function(data){
@@ -31,4 +31,4 @@ angular.module('vlogApp', [])
     getPosts();
     $scope.orderProp = 'title';
 
-  });
+  }]);
