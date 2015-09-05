@@ -1,3 +1,3 @@
-var vlogApp = angular.module('vlogApp', [
-  'vlogControllers'
-]);
+// var vlogApp = angular.module('vlogApp', [
+//   'vlogControllers'
+// ]);
