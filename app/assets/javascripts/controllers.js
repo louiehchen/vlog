@@ -1,4 +1,4 @@
-// var vlogControllers = angular.module('vlogControllers', []);
+var vlogControllers = angular.module('vlogControllers', []);
 
 // function getPosts(){
 //   $http.get('/posts_json').success(function(data){
@@ -19,16 +19,16 @@
 //   $scope.orderProp = 'title';
 // });
 
-angular.module('vlogApp', [])
-  .controller('vlogControllers', ['$scope','$http', function($scope, $http) {
 
-    function getPosts(){
-      $http.get('/posts_json').success(function(data){
-        $scope.posts = data;
-        // console.log(data)
-      });
-    };
-    getPosts();
-    $scope.orderProp = 'title';
+vlogControllers.controller('vlogControllers', ['$scope','$http', function($scope, $http) {
 
-  }]);
+  function getPosts(){
+    $http.get('/posts_json').success(function(data){
+      $scope.posts = data;
+      // console.log(data)
+    });
+  };
+  getPosts();
+  $scope.orderProp = 'title';
+
+}]);
