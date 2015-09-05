@@ -1,25 +1,5 @@
 var vlogControllers = angular.module('vlogControllers', []);
 
-// function getPosts(){
-//   $http.get('/posts_json').success(function(data){
-//     $scope.posts = data;
-//     // console.log(data)
-//   });
-// };
-
-// vlogControllers.controller('getPosts', function($scope, $http){
-//   // eventually order by created at
-//   function getPosts(){
-//     $http.get('/posts_json').success(function(data){
-//       $scope.posts = data;
-//       // console.log(data)
-//     });
-//   };
-//   getPosts();
-//   $scope.orderProp = 'title';
-// });
-
-
 vlogControllers.controller('vlogControllers', ['$scope','$http', function($scope, $http) {
 
   function getPosts(){
