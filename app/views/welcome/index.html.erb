@@ -34,7 +34,11 @@
             <a href="http://www.twitter.com/lowellmower" target="_blank"><%= image_tag('twitter', size: '50x50', alt: 'twitter icon')%></a>
           </li>
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Your Website 2014</p>
+       <p class="copyright text-muted">Copyright &copy; Your Website 2014
+        <% unless admin_signed_in? %>
+          <%= link_to 'admin', new_admin_session_path %>
+        <% end %>
+        </p>
       </div>
     </div>
   </div>
