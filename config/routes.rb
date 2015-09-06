@@ -13,10 +13,13 @@ Rails.application.routes.draw do
   resources :posts
 
   get '/posts_json' => 'posts#all_posts'
-
   get '/projects' => 'projects#index'
-
   get '/about' => 'welcome#about'
+  get '/apps' => 'welcome#apps'
+
+  namespace :apps do
+    resources :background, :only => [:index]
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
