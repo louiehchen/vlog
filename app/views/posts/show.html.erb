@@ -1,8 +1,4 @@
-<h2>Show Post</h2>
-<h4> <%= @post.title %> </h4>
-<h4>This will be an iframe for hosted video url:</h4>
-<iframe width="420" height="315"
-src='http://www.youtube.com/embed/<%= @post.url %>?autoplay=1' >
+<iframe id="video" style="height: 500px;" src='http://www.youtube.com/embed/<%= @post.url %>?autoplay=1' >
 </iframe>
 <h4> <%= @post.url %> </h4>
 <h4> <%= @post.description %> </h4>
@@ -12,16 +8,15 @@ src='http://www.youtube.com/embed/<%= @post.url %>?autoplay=1' >
   <%= link_to 'edit', edit_post_path(@post) %>
 <% end %>
 
-<div id="disqus_thread"></div>
+<div id="disqus_thread" class="col-md-8"></div>
 <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'lowellmower';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+  /* * * CONFIGURATION VARIABLES * * */
+  var disqus_shortname = 'lowellmower';
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
