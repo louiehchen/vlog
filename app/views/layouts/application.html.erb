@@ -13,10 +13,7 @@
 </head>
 <body>
 
-<% if flash[:notice] || flash[:alert] %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-<% end %>
+<%= flash_messages %>
 
 <!-- Navigation -->
 <nav class="navbar-custom navbar-transparent">
