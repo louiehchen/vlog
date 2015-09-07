@@ -1,14 +1,20 @@
 <iframe id="video" style="height: 500px;" src='http://www.youtube.com/embed/<%= @post.url %>?autoplay=1' >
 </iframe>
-<h4> <%= @post.url %> </h4>
-<h4> <%= @post.description %> </h4>
-<h4>DISQUS COMMENTS BELOW:</h4>
 
-<% if admin_signed_in? %>
-  <%= link_to 'edit', edit_post_path(@post) %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h4><%= @post.description %></h4>
+    </div>
 
-<div id="disqus_thread" class="col-md-8"></div>
+    <% if admin_signed_in? %>
+      <%= link_to 'edit', edit_post_path(@post) %>
+    <% end %>
+
+    <div id="disqus_thread" class="col-md-6"></div>
+  </div>
+</div>
+
 <script type="text/javascript">
   /* * * CONFIGURATION VARIABLES * * */
   var disqus_shortname = 'lowellmower';
