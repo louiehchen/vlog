@@ -3,6 +3,7 @@ $(document).ready(function(){
   function setSize(){
     $('#video').width(getWidth);
   };
+  setSize();
 });
 function getWidth(){
   return $(window).width() - 120;
