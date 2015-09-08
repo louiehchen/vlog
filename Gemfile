@@ -21,6 +21,7 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'factory_girl_rails', '~>4.4.1'
   gem 'capybara'
 end
 
