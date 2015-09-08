@@ -1,3 +1,4 @@
 var vlogApp = angular.module('vlogApp', [
-  'vlogControllers'
+  'vlogControllers',
+  'todoController'
 ]);
