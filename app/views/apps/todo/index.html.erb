@@ -1,15 +1,24 @@
-<h1>Hello Welcome to TODO</h1>
+<div class="container">
+  <h1>Add to the List:</h1>
 
-<div ng-controller="todoController">
+  <div class="row">
+    <div ng-controller="todoController">
+      <div class="col-md-6">
+        <form name="form" ng-submit="addItem()">
+          <input class="form-control" type="text" name="newItem" ng-model="newItem" required><br><br>
+          <button class="btn btn-md btn-primary" ng-disable="form.$invalid">Add Item</button>
+        </form><br>
+        <button ng-click="clearComplete()" class="btn btn-md btn-warning">Clear Complete</button>
+      </div>
+      <div class="col-md-6">
+        <ul>
+          <li style="list-style-type: none;" ng-repeat="item in todos">
+            <h3><input type="checkbox" ng-model="item.done"></input>
+            <span ng-class="{'done':item.done}">{{item.title}}</span></h3>
+          </li>
+        </ul>
 
-  <form name="form" ng-submit="addItem()">
-    <input type="text" name="newItem" ng-model="newItem" required>
-    <button class="btn-md btn-primary" ng-disable="form.$invalid">New Item</button>
-  </form>
-
-  <ul>
-    <li ng-repeat="item in todos">
-      {{item.title}}
-    </li>
-  </ul>
+      </div>
+    </div>
+  </div>
 </div>
