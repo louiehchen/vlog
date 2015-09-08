@@ -1,0 +1,15 @@
+<h1>Hello Welcome to TODO</h1>
+
+<div ng-controller="todoController">
+
+  <form name="form" ng-submit="addItem()">
+    <input type="text" name="newItem" ng-model="newItem" required>
+    <button class="btn-md btn-primary" ng-disable="form.$invalid">New Item</button>
+  </form>
+
+  <ul>
+    <li ng-repeat="item in todos">
+      {{item.title}}
+    </li>
+  </ul>
+</div>
