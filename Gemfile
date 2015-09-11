@@ -15,6 +15,7 @@ gem 'therubyracer'
 gem 'angularjs-rails'
 gem 'ckeditor'
 gem 'paperclip'
+gem 'nokogiri'
 
 
 group :development, :test do
