@@ -3,7 +3,8 @@
   <%= f.text_field :title %>
   <%= f.label :url %>
   <%= f.text_field :url %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+  <%= f.label :sub_title %>
+  <%= f.text_field :sub_title %>
+  <%= f.cktext_area :description, :value => 'Description here', :id => 'sometext' %>
   <%= f.submit 'Submit'%>
 <% end %>

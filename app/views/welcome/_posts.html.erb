@@ -8,7 +8,7 @@
         <div class="post-preview">
           <a href="/posts/{{post.id}}">
             <h2 class="post-title">{{post.title}}</h2>
-            <h4 class="post-subtitle">{{post.description | limitTo: 140}}...</h4>
+            <h4 class="post-subtitle">{{post.sub_title | limitTo: 140}}...</h4>
           </a>
             <p class="post-meta">Posted under: <a href="#">POST CATEGORY</a> posted on: {{post.created_at | date: "MM-dd-yyyy"}}</p>
         </div>

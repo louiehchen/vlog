@@ -13,6 +13,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'therubyracer'
 gem 'angularjs-rails'
+gem 'ckeditor'
+gem 'paperclip'
+gem 'nokogiri'
 
 
 group :development, :test do
