@@ -2,7 +2,7 @@
   <li ng-repeat='post in posts | filter:query'>
     <div class="row">
       <div class="col-sm-2 col-sm-offset-1" id="post-img">
-        <%= image_tag('laptop', size: '125x125', alt: 'placeholder', :class => 'img-circle')%>
+        <a href="/posts/{{post.id}}"><img src="/assets/{{post.category}}.jpg" class="img-circle" alt="{{post.category}}" height="125" width="125"></a>
       </div>
       <div class="col-sm-8">
         <div class="post-preview">
@@ -10,7 +10,7 @@
             <h2 class="post-title">{{post.title}}</h2>
             <h4 class="post-subtitle">{{post.subtitle | limitTo: 140}}...</h4>
           </a>
-            <p class="post-meta">Posted under: <a href="#">POST CATEGORY</a> posted on: {{post.created_at | date: "MM-dd-yyyy"}}</p>
+            <p class="post-meta">Posted under: <a href="#">{{post.category}}</a> posted on: {{post.created_at | date: "MM-dd-yyyy"}}</p>
         </div>
         <hr>
       </div>
