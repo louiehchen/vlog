@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'therubyracer'
 gem 'angularjs-rails'
 gem 'nokogiri'
+gem 'ckeditor_rails'
 
 
 group :development, :test do
