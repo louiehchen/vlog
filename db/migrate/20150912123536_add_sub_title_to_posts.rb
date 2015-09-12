@@ -4,7 +4,6 @@ class AddSubTitleToPosts < ActiveRecord::Migration
     add_column :posts, :subtitle, :string
     Post.all.each {|post| post.save}
     change_column_null :posts, :subtitle, false
-    remove_column :posts, :sub_title
   end
 
   def down
