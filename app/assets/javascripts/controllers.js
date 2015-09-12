@@ -5,8 +5,10 @@ vlogControllers.controller('vlogControllers', ['$scope','$http', function($scope
   function getPosts(){
     $http.get('/posts_json').success(function(data){
       $scope.posts = data;
+      // console.log(data)
     });
   };
   getPosts();
   $scope.orderProp = 'title';
+
 }]);
