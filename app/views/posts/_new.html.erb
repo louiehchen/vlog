@@ -1,11 +1,14 @@
-<%= form_for @post do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :url %>
-  <%= f.text_field :url %>
-  <%= f.label :subtitle %>
-  <%= f.text_field :subtitle %>
-  <%= f.label :description %>
-  <%= f.text_area :description, :class => 'ckeditor' %>
-  <%= f.submit 'Submit'%>
-<% end %>
+<div class="container">
+  <%= form_for @post do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+    <%= f.label :subtitle %>
+    <%= f.text_field :subtitle %>
+    <%= f.label :description %>
+    <%= f.text_area :description, :class => 'ckeditor' %>
+    <%= f.select :category, ["tech", "history", "reuben"] %>
+    <%= f.submit 'Submit'%>
+  <% end %>
+</div>
