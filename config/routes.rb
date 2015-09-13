@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   namespace :apps do
     resources :background, :only => [:index]
     resources :todo, :only => [:index]
+    resources :boxdot, :only => [:index]
   end
 
   # Example of regular route:
