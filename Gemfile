@@ -15,7 +15,7 @@ gem 'therubyracer'
 gem 'angularjs-rails'
 gem 'nokogiri'
 gem 'ckeditor_rails'
-
+gem 'mandrill-api'
 
 group :development, :test do
   gem 'byebug'
