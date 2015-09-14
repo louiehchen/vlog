@@ -6,14 +6,13 @@
       <p>Junior software developer with an extensive background in the educational space and light startup experience. Familiar with modern programming languages/frameworks/technologies including but not limited to Ruby, JavaScript, Python, Rails, Sinatra, Meteor, Angular, JQuery, HTML, CSS, Active Record, PostgreSQL, SQLite, Mongo, and API integration. Extremely comfortable with Git workflow, Agile development methodologies, and TDD. Confident working in pairing sessions as well as singularly.</p>
     </div>
     <div class="col-md-7 text-center">
-      <h1>ToDo Here:</h1>
-      <ul>
-        <p>Make a contact form</p>
-        <p>Link contact form to mailer</p>
-        <p>Ensure mailer has validations</p>
-        <p>Ensure mailer has tests</p>
-        <p>Add picture of my pretty face</p>
-      </ul>
+      <h1>Say Hello!</h1>
+      <%= form_tag '/mail', :id => "contact_form" do %>
+        <%= text_field_tag "name", nil, class: "form-control", placeholder: "your name" %><br/>
+        <%= text_field_tag "email", nil, class: "form-control", placeholder: "email" %><br/>
+        <%= text_area_tag "body", nil, class: "form-control", size: "25x10", placeholder: "message" %><br/><br/>
+        <%= submit_tag "Say Hello", class: "btn btn-primary", :id => "say_hello" %>
+      <% end %>
     </div>
   </div>
 </div>
