@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/projects' => 'projects#index'
   get '/about' => 'welcome#about'
   get '/apps' => 'welcome#apps'
+  post '/mail' => 'mailer#contact_mailer'
 
   namespace :apps do
     resources :background, :only => [:index]
