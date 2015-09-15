@@ -6,7 +6,7 @@ ActionMailer::Base.smtp_settings = {
   :password => ENV['MAILCHIMP_API'],
   :domain => 'http://www.lowellmower.com',
   :address => 'smtp.mandrillapp.com',
-  :port => 587,
+  :port => 25,
   :authentication => :plain,
   :enable_starttls_auto => true
 }
