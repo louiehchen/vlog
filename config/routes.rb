@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     resources :background, :only => [:index]
     resources :todo, :only => [:index]
     resources :boxdot, :only => [:index]
+    resources :bouncy, :only => [:index]
   end
 
   # Example of regular route:
