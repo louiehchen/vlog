@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     resources :todo, :only => [:index]
     resources :boxdot, :only => [:index]
     resources :bouncy, :only => [:index]
+    resources :ip, :only => [:index]
   end
 
   # Example of regular route:
