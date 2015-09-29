@@ -21,10 +21,11 @@ $(document).ready(function(){
       sec++;
       switchBackground();
       if (sec >= 60) {
-        sec =0;
+        sec = 0;
         min++
       };
     };
+
     function makeTimeString() {
       return (min ? (min > 9 ? min : "0" + min) : "00") + ":" + (sec ? (sec > 9 ? sec : "0" + sec) : "00") + ":" + (mil > 9 ? mil : "0" + mil)
     };
