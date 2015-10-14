@@ -25,6 +25,7 @@ Rails.application.routes.draw do
     resources :bouncy, :only => [:index]
     resources :ip, :only => [:index]
     resources :stopwatch, :only => [:index]
+    resources :texty, :only => [:index, :send]
   end
 
   # Example of regular route:
