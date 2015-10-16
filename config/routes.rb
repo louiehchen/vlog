@@ -25,7 +25,8 @@ Rails.application.routes.draw do
     resources :bouncy, :only => [:index]
     resources :ip, :only => [:index]
     resources :stopwatch, :only => [:index]
-    resources :texty, :only => [:index, :send]
+    resources :texty, :only => [:index]
+    post '/texty/send_text' => 'texty#send_text'
   end
 
   # Example of regular route:
