@@ -7,6 +7,7 @@ class Apps::TextyController < ApplicationController
   def send_text
     @phone = Phone.new(phone_params)
     @phone.send_sms(@phone.clean_number)
+    @phone.save
     redirect_to :back
   end
 
