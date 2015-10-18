@@ -1,5 +1,3 @@
-require 'byebug'
-
 class Apps::ConfessionsController < ApplicationController
 
   def index
