@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="container">
+    <h1>Hello, confessions!</h1>
+    <p>If you submit a confessional, you will recieve a random confessional from a stranger. You may submit this information anonymously or with a name attached.</p>
+  </div>
+  <div class="container" id="app-confessions-form">
+    <%= form_for @confession, url: apps_confessions_path do |f| %>
+      <%= f.label :body, 'Share a confession' %>
+      <%= f.text_area :body, class: 'form-control', placeholder: "your secret is safe...", id: 'confession-body' %><br>
+      <%= f.label :owner, "If you'd like, enter your name" %>
+      <%= f.text_field :owner, class: 'form-control', placeholder: "otherwise listed as anonymous" %><br>
+      <%= f.submit 'submit', class: 'btn btn-primary', id: "app-conf-submit" %>
+    <% end %>
+  </div>
+
+  <div class="container">
+    <h2 id="shared-confession"></h2>
+  </div>
+
+</div>
