@@ -1,0 +1,29 @@
+<!-- <p>Reubometer: <meter id="myMeter" min="0" low="1" high="10" max="11" value="2"></meter></p> -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="pull-left" id="meter-container" rating="<%=@reuben.rating%>" style="margin-top: 10px; min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto"></div>
+  </div>
+  <div class="col-md-4">
+    <h2><%= @reuben.location %></h2>
+  </div>
+  <div class="col-md-4">
+    <%= image_tag 'reuben', class: 'img-circle', style: 'margin-top: 10px;' %>
+  </div>
+</div>
+<!-- <div id="map" lat='#{@reuben.lat}' lon='#{@reuben.lon}'></div>
+<script>
+  var map;
+  function initMap() {
+    var m = document.getElementById('map')
+    var lat = parseFloat(m.attributes.lat.value)
+    var lon = parseFloat(m.attributes.lon.value)
+    map = new google.maps.Map(m, {
+      center: {lat: lat, lng: lon},
+      zoom: 8
+    });
+  }
+</script> -->

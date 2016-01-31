@@ -1,0 +1,23 @@
+<ul id="reuben-list">
+  <li ng-repeat='r in reubens | filter:query'>
+    <div class="row">
+      <div class="col-sm-2 col-sm-offset-1" id="post-img">
+        <a href="/reubens/{{r.id}}"><img src="/assets/reuben.jpg" class="img-circle" alt="{{r.desc}}" height="125" width="125"></a>
+      </div>
+      <div class="col-sm-8">
+        <div class="post-preview">
+          <a href="/reubens/{{r.id}}">
+            <h2 class="post-title">{{r.location}}</h2>
+            <!-- <h4 class="post-subtitle">{{post.subtitle | limitTo: 140}}...</h4> -->
+          </a>
+          <p class="post-meta">
+            {{r.desc}}
+          </p>
+
+<!--Posted under: <a href="#">{{post.category}}</a> posted on: {{post.created_at | date: "MM-dd-yyyy"}}</p>
+ -->     </div>
+        <hr>
+      </div>
+    </div>
+  </li>
+</ul>
