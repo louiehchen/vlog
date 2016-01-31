@@ -1,0 +1,33 @@
+<style type="text/css">
+#map {
+  margin-top: 10px;
+  height:420px;
+  width:800px;
+}
+#location-list{
+  margin-top: 10px;
+}
+.infoWindowContent {
+  font-size:  12px !important;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+h2 {
+  margin-bottom:0;
+  margin-top: 0;
+}
+</style>
+<div class="container">
+  <div ng-app="vlogApp" ng-controller="reubenMapController">
+    <div class="row">
+      <div class="col-md-9">
+        <div id="map"></div>
+      </div>
+      <div class="col-md-3">
+        <div id="location-list" ng-repeat="marker in markers | orderBy : 'title'">
+           <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

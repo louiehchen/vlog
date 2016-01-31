@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <htmlng ng-app='vlogApp'>
 <head>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvqwJKWEdeJKDc93ymEP5wjqSHiNMH1ro"
+    async defer>
+  </script>
   <title>Lowell Mower || Tech, History, Reubens</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <meta name="description" content="A vlog dedicated to technology, history, and the quest for the perfect rueben sammich, who doesn't like sammichez? Screen casts and tutorials are simply a by-product of documenting the journey." />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
 
@@ -66,4 +79,6 @@
 <!-- <script src="js/clean-blog.min.js"></script> -->
 
 </body>
+<footer>
+</footer>
 </html>

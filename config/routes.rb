@@ -16,7 +16,10 @@ Rails.application.routes.draw do
   get '/projects' => 'projects#index'
   get '/about' => 'welcome#about'
   get '/apps' => 'welcome#apps'
+  get '/reubens_json' => 'reubens#all_reubens'
   post '/mail' => 'mailer#contact_mailer'
+
+  resources :reubens
 
   namespace :apps do
     resources :background, :only => [:index]
