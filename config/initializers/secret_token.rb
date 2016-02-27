@@ -1,1 +1,1 @@
-MyApp::Application.config.secret_token = ENV['SECRET_TOKEN']
+Vlog::Application.config.secret_token = ENV['SECRET_TOKEN']
