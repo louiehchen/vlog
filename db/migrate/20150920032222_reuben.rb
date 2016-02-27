@@ -1,6 +1,6 @@
-class Reuben < ActiveRecord::Migration
+class Reubens < ActiveRecord::Migration
   def change
-    create_table :reuben do |t|
+    create_table :reubens do |t|
       t.string :restaurant, null: false
       t.decimal :rating
       t.string :desc
