@@ -99,7 +99,8 @@ $(document).ready(function(){
       }
       else{
         alert("G A M E   O V E R");
-        document.location.reload();
+        clearInterval(intervalId);
+        // document.location.reload();
         // console.log('game over');
       }
     };
@@ -166,6 +167,6 @@ $(document).ready(function(){
 
   document.addEventListener('keydown', keyDownHandler, false);
   document.addEventListener('keyup', keyUpHandler, false);
-  setInterval(draw, 10);
+  var intervalId = setInterval(draw, 10);
 
 });
