@@ -18,7 +18,6 @@ gem 'ckeditor_rails'
 gem 'mandrill-api'
 gem 'twilio-ruby', '~> 4.2.1'
 gem 'underscore-rails'
-gem 'rails_12factor'
 
 group :development, :test do
   gem 'byebug'
@@ -29,6 +28,10 @@ group :development, :test do
   gem 'factory_girl_rails', '~>4.4.1'
   gem 'capybara'
   gem 'faker'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 group :development do
