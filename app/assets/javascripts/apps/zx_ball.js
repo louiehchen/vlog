@@ -98,8 +98,8 @@ $(document).ready(function(){
         dy = -dy;
       }
       else{
-        alert("G A M E   O V E R");
-        document.location.reload();
+        // alert("G A M E   O V E R");
+        // document.location.reload();
         // console.log('game over');
       }
     };
