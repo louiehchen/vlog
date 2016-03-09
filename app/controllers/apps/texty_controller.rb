@@ -1,4 +1,3 @@
-require 'byebug'
 class Apps::TextyController < ApplicationController
 
   def index
