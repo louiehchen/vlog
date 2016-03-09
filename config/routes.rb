@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   devise_for :admins, controllers: { sessions: 'admins/sessions' }
 
   devise_for :users, controllers: { sessions: "users/sessions" }
@@ -33,6 +32,8 @@ Rails.application.routes.draw do
     resources :zx_ball, only: [:index]
     resources :voip, only: [:index]
     post '/texty/send_text' => 'texty#send_text'
+    post '/voip/make_call' => 'voip#make_call'
+    post '/voip/connection' => 'voip#connection'
   end
 
   # Example of regular route:

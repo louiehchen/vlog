@@ -1,4 +1,4 @@
-<iframe id="video" style="height: 500px;" src='http://www.youtube.com/embed/<%= @post.url %>?autoplay=1' >
+<iframe id="video" style="height: 500px; width: 600px;" src='http://www.youtube.com/embed/<%= @post.url %>?autoplay=1' >
 </iframe>
 
 <div class="container">
@@ -26,3 +26,14 @@
   })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<script type="text/javascript">
+$(window).resize(setSize);
+  function setSize(){
+    $('#video').width(getWidth);
+  };
+  setSize();
+function getWidth(){
+  return $(window).width() - 120;
+};
+</script>

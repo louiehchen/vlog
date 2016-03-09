@@ -1,7 +1,9 @@
+require 'byebug'
 class Apps::TextyController < ApplicationController
 
   def index
     @phone = Phone.new
+    byebug
   end
 
   def send_text
