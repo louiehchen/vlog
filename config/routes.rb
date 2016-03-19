@@ -31,6 +31,7 @@ Rails.application.routes.draw do
     resources :texty, :only => [:index]
     resources :confessions
     resources :zx_ball, only: [:index]
+    resources :weather
     post '/texty/send_text' => 'texty#send_text'
   end
 
