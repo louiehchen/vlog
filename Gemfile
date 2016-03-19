@@ -18,6 +18,7 @@ gem 'ckeditor_rails'
 gem 'mandrill-api'
 gem 'twilio-ruby', '~> 4.2.1'
 gem 'underscore-rails'
+gem 'slim-rails'
 
 group :development, :test do
   gem 'byebug'
