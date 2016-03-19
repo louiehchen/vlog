@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   post '/mail' => 'mailer#contact_mailer'
 
   resources :reubens
+  resources :pseudo_users
 
   namespace :apps do
     resources :background, :only => [:index]
