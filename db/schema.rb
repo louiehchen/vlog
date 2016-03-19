@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151017162402) do
+ActiveRecord::Schema.define(version: 20160319151606) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,8 +34,24 @@ ActiveRecord::Schema.define(version: 20151017162402) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string   "data_file_name",               null: false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.integer  "assetable_id"
+    t.string   "assetable_type",    limit: 30
+    t.string   "type",              limit: 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
+  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
+
   create_table "confessions", force: :cascade do |t|
-    t.text     "body",                             null: false
+    t.text     "body"
     t.string   "owner",      default: "Anonymous"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -45,6 +61,7 @@ ActiveRecord::Schema.define(version: 20151017162402) do
     t.string   "number"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "pseudo_user_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -56,6 +73,23 @@ ActiveRecord::Schema.define(version: 20151017162402) do
     t.datetime "updated_at",  null: false
     t.string   "subtitle",    null: false
     t.string   "category",    null: false
+  end
+
+  create_table "pseudo_users", force: :cascade do |t|
+    t.string  "name"
+    t.string  "email"
+    t.float   "lat"
+    t.float   "lon"
+    t.integer "phone_id"
+  end
+
+  create_table "reuben", force: :cascade do |t|
+    t.string  "restaurant", null: false
+    t.decimal "rating"
+    t.string  "desc"
+    t.string  "location"
+    t.decimal "lat"
+    t.decimal "lon"
   end
 
   create_table "users", force: :cascade do |t|
