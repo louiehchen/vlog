@@ -1,5 +1,7 @@
 class Phone < ActiveRecord::Base
 
+	belongs_to :pseudo_user
+
   include Messenger
 
   def clean_number
