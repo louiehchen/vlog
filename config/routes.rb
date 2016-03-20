@@ -32,8 +32,10 @@ Rails.application.routes.draw do
     resources :texty, :only => [:index]
     resources :confessions
     resources :zx_ball, only: [:index]
-    resources :weather
+    resources :weather, only: [:index]
     post '/texty/send_text' => 'texty#send_text'
+    # weather data
+    get '/weather/get-weather-data' => 'weather#get_weather_data'
   end
 
   # Example of regular route:
