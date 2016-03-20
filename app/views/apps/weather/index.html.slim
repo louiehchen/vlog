@@ -3,9 +3,10 @@
 
 .container.row
 	.col-md-6.text-center
-		h2 The Current Weather Is...
 		div.weather-controller [ng-controller='weatherController']
-			= render 'weather_results'
+			div [ng-repeat="current in weather"]
+				= render 'weather_results'
+				
 	.col-md-6
 		p.base-margins Want to be reminded to grab an umbrella before work? Enter your information and we'll shoot you a text if its going to rain! You can enter a city, or we'll figure out where you are by default... SpOoKy :)
 		.form-group
@@ -26,22 +27,4 @@
 						input.form-control type="text" name="pseudo_user[city]" placeholder="Optional"
 				button.pull-right.btn.btn-md.btn-primary Submit
 
-/ <ul id="post-list">
-/   <li ng-repeat='post in posts | filter:query'>
-/     <div class="row">
-/       <div class="col-sm-2 col-sm-offset-1" id="post-img">
-/         <a href="/posts/{{post.id}}"><img src="/assets/{{post.category}}.jpg" class="img-circle" alt="{{post.category}}" height="125" width="125"></a>
-/       </div>
-/       <div class="col-sm-8">
-/         <div class="post-preview">
-/           <a href="/posts/{{post.id}}">
-/             <h2 class="post-title">{{post.title}}</h2>
-/             <h4 class="post-subtitle">{{post.subtitle | limitTo: 140}}...</h4>
-/           </a>
-/             <p class="post-meta">Posted under: <a href="#">{{post.category}}</a> posted on: {{post.created_at | date: "MM-dd-yyyy"}}</p>
-/         </div>
-/         <hr>
-/       </div>
-/     </div>
-/   </li>
-/ </ul>
+javascript:

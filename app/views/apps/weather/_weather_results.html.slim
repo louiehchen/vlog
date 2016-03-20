@@ -1,1 +1,4 @@
-h2 Some fucking weather
+h2 = "The Current Weather for {{current.name}} Is..."
+img [ng-src="http://openweathermap.org/img/w/{{current.weather[0].icon}}.png"]
+h3 = "{{current.weather[0].main}} with some {{current.weather[0].description}}."
+h4 = "Temp: {{current.main.temp}} f | Humidity: {{current.main.humidity}}%"
