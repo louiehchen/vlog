@@ -1,7 +1,5 @@
 var vlogController = angular.module('vlogController', []);
-var weatherController =
-// var reubenController = angular.module('reubenController', []);
-// var reubenMapController = angular.module('reubenMapController', []);
+var weatherController = angular.module('weatherController', []);
 
 vlogController.controller('vlogController', ['$scope','$http', function($scope, $http) {
 
