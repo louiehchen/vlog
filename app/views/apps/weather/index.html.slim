@@ -6,7 +6,7 @@
 		div.weather-controller [ng-controller='weatherController']
 			div [ng-repeat="current in weather"]
 				= render 'weather_results'
-				
+
 	.col-md-6
 		p.base-margins Want to be reminded to grab an umbrella before work? Enter your information and we'll shoot you a text if its going to rain! You can enter a city, or we'll figure out where you are by default... SpOoKy :)
 		.form-group
@@ -21,10 +21,8 @@
 						input.form-control type="text" name="pseudo_user[email]" placeholder="Email"
 					li Phone:
 					li.input-text-area
-						input.form-control type="text" name="phone" placeholder="### - ### - ####"
+						input.form-control type="text" name="number" placeholder="### - ### - ####"
 					li City:
 					li.input-text-area
 						input.form-control type="text" name="pseudo_user[city]" placeholder="Optional"
 				button.pull-right.btn.btn-md.btn-primary Submit
-
-javascript:

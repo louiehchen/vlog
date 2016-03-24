@@ -2,6 +2,8 @@ class Phone < ActiveRecord::Base
 
 	belongs_to :pseudo_user
 
+	validates :number, presence: true
+
   include Messenger
 
   def clean_number
