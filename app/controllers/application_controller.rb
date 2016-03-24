@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   		loc = request.location
   		sudo_user.assign_attributes(lat: loc.latitude, lon: loc.longitude)
   	rescue => e
-  		Rails.logger.error('Issue with geocoder: #{e.message}')
+  		Rails.logger.error('Issue with geocoder:' + e.message)
   	end
   end
   
